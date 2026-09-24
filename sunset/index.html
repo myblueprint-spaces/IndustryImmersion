@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Industry Immersion Series has ended | myBlueprint</title>
-<meta name="description" content="Thanks to every student, teacher and partner who took part. The work has moved into Career Launch, myBlueprint's national career exploration program.">
+<title>Industry Immersion Series — myBlueprint</title>
+<meta name="description" content="The Industry Immersion Series has ended. Career stories for students are now free on LaunchPad.">
 <link rel="canonical" href="https://industryimmersionseries.myblueprint.ca/">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://use.typekit.net" crossorigin>
@@ -25,15 +25,23 @@
     margin: 0;
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 48px 16px;
+    flex-direction: column;
     background: var(--bg);
     color: var(--text);
     font-family: "museo-sans", system-ui, -apple-system, "Segoe UI", sans-serif;
     font-weight: 500;
     font-size: 17px;
     line-height: 1.6;
+  }
+  header { padding: 20px 16px; }
+  .logo { display: inline-block; line-height: 0; }
+  .logo img { display: block; height: 36px; width: auto; }
+  .wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px 64px;
   }
   main { width: 100%; max-width: 680px; }
   h1 {
@@ -57,27 +65,33 @@
   a:hover { color: var(--blue-hover); text-decoration: underline; }
   a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
   .contact { margin: 0; }
+  @media (min-width: 768px) { header { padding: 24px 32px; } }
 </style>
 </head>
 <body>
+<header>
+  <a class="logo" href="https://myblueprint.ca"><img src="data:image/webp;base64,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" alt="myBlueprint" width="150" height="36"></a>
+</header>
+<div class="wrap">
 <main>
   <h1>The Industry Immersion Series has ended.</h1>
-  <p class="intro">Thanks to every student, teacher and partner who took part. The work has moved into Career Launch, myBlueprint's national career exploration program.</p>
+  <p class="intro">Thanks to every student, teacher, and partner who took part. The work has moved into Career Launch, which brings employers and industry professionals to students across the country.</p>
   <ul>
     <li>
-      <p><strong>Students</strong> — Career stories from people doing the work, free and open, no login.</p>
+      <p><strong>Students</strong> — Career stories from people doing the work. Free and open, no login.</p>
       <a href="https://launchpad.myblueprint.ca">Watch on LaunchPad →</a>
     </li>
     <li>
-      <p><strong>Teachers</strong> — LaunchPad is free to use with your class today. Assignable collections and the teacher layer arrive in 2027.</p>
+      <p><strong>Teachers</strong> — LaunchPad is free to use with your class today. Ready-made sets of videos you can assign to students are coming in 2027, as part of Career Launch.</p>
       <a href="https://launchpad.myblueprint.ca">Explore LaunchPad →</a>
     </li>
     <li>
-      <p><strong>Industry and associations</strong> — Career Launch launches nationally in November 2027, with sector pages and a national employer directory in spring 2027.</p>
+      <p><strong>Industry and associations</strong> — Sector pages and a national employer directory arrive in spring 2027, and the national Career Launch event runs in November 2027.</p>
       <a href="https://careerlaunch.myblueprint.ca/partners">See how partners take part →</a>
     </li>
   </ul>
   <p class="contact">Questions: <a href="mailto:partnerships@myblueprint.ca">partnerships@myblueprint.ca</a></p>
 </main>
+</div>
 </body>
 </html>
