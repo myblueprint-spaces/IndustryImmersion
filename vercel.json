@@ -4,7 +4,13 @@
   "installCommand": "",
   "buildCommand": "echo 'Serving static sunset page; Next.js app is not built'",
   "outputDirectory": "sunset",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "redirects": [
+    {
+      "source": "/:path+",
+      "destination": "/",
+      "statusCode": 301
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -13,8 +19,14 @@
           "key": "Content-Security-Policy",
           "value": "default-src 'none'; style-src 'unsafe-inline' https://use.typekit.net https://p.typekit.net https://fonts.googleapis.com; font-src https://use.typekit.net https://fonts.gstatic.com; img-src data: https://p.typekit.net; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
         },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]
